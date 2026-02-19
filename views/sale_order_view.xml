@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_pricelist_label" model="ir.ui.view">
+        <field name="name">sale.order.form.pricelist.label</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <!-- Cambiar label del campo pricelist_id visible -->
+            <label for="pricelist_id" position="replace">
+                <label for="pricelist_id" string="Moneda" groups="product.group_product_pricelist" invisible="not has_active_pricelist"/>
+            </label>
+        </field>
+    </record>
+</odoo>
